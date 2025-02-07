@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Carica variabili dal file .env
 if [ -f .env ]; then
   export $(cat .env | grep -v '^#' | xargs)
 else
@@ -8,11 +7,9 @@ else
   exit 1
 fi
 
-# Leggi il numero di pazienti e gli ID
 NUM_PATIENTS=$NUM_PATIENTS
 PATIENT_IDS=($(echo $PATIENT_IDS | tr ',' ' '))
 
-# Inizializza il file docker-compose.yml
 cat > docker-compose.yml <<EOL
 services:
   fluentd:
@@ -29,7 +26,6 @@ services:
         condition: service_completed_successfully
 EOL
 
-# Aggiungi i pazienti dinamicamente
 for i in $(seq 1 $NUM_PATIENTS); do
   PATIENT_ID=${PATIENT_IDS[$i-1]}
   
@@ -50,7 +46,6 @@ for i in $(seq 1 $NUM_PATIENTS); do
 EOL
 done
 
-# Aggiungi il broker e il resto dei servizi
 cat >> docker-compose.yml <<EOL
 
   broker:
@@ -88,7 +83,6 @@ cat >> docker-compose.yml <<EOL
       - broker
 EOL
 
-# Aggiungi il servizio spark
 cat >> docker-compose.yml <<EOL
 
   spark:
@@ -108,13 +102,11 @@ cat >> docker-compose.yml <<EOL
         condition: service_completed_successfully
 EOL
 
-# Aggiungi la definizione del volume sparklibs
 cat >> docker-compose.yml <<EOL
 
 volumes:
   sparklibs:
 EOL
 
-# Conferma il completamento
 echo "Il file docker-compose.yml è stato generato con successo."
 
