@@ -30,8 +30,8 @@ The system architecture is based on:
 ### Installation and Setup
 ```sh
 # Clone the repository
-git clone url_github_progettotap
-cd progettotap
+git clone https://github.com/lorelarocca2001/BioWatch---Vital-Signs-Monitoring
+cd BioWatch---Vital-Signs-Monitoring
 
 # Configure the .env file
 nano .env
@@ -41,10 +41,10 @@ nano .env
 # Assign permissions
 chmod -R 777 *
 
-# Build the Spark container
+# Build the Docker image for Spark 
 docker build spark --tag tap:spark
 
-# Train the model
+# Train the ML model
 docker run --hostname spark -p 4040:4040 -it --rm \
   -v ./spark/code/:/opt/tap/ \
   -v ./spark/dataset:/tmp/dataset tap:spark \
@@ -59,7 +59,7 @@ docker compose up
 
 ### Elastic Cloud Configuration
 1. Access **Elastic Cloud Personal Deployment**.
-2. Import the dashboard and index the data (index `vitalparameters`).
+2. Import the dashboard and index the data (default index `vitalparameters`).
 
 ## Data Visualization and Analysis
 - **Time-series charts** for each vital parameter.
