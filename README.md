@@ -15,10 +15,10 @@ The system architecture is based on:
 7. **Kibana** : Intuitive dashboards for real-time monitoring of vital parameters, based on data stored in Elasticsearch.
 
 ## Workflow
-1. **Data Collection:** Retrieving clinical data (age, gender, height, and weight) and vital parameters via **VitalDB Web API** and **VitalDB Python library**.
+1. **Data Collection:** Retrieving clinical data (age, gender, height, weight) and vital parameters via **VitalDB Web API** and **VitalDB Python library**.
 2. **Preprocessing:** Only data from the **Solar8000M** device, which captures the essential parameters for human life, is extracted. The parameters extracted are: Heart Rate, Respiratory Rate, Body Temperature, Oxygen Saturation, Systolic Blood Pressure and Diastolic Blood Pressure.  **50%** of the least significant data is removed to account for the device's initial and final phases, during which the readings are either still **stabilizing** or **experiencing decay**, making them unreliable.
-3. **Streaming:** Sending data to Fluentd via **HTTP** and forwarding it to Kafka. In order to create a realistic simulation of a real-time data source, the data is sent to Fluentd **every 2 seconds**, according to the device's sampling frequency.
-4. **Data Enrichment:** Calculation of derived parameters (Pulse Pressure, BMI, MAP) with **Apache Spark** and risk classification using a **Random Forest** machine learning model trained on the **[Human Vital Signs Dataset (Kaggle)](https://www.kaggle.com/datasets/nasirayub2/human-vital-sign-dataset)**.
+3. **Data Streaming:** Sending data to Fluentd via **HTTP** and forwarding it to Kafka. In order to create a realistic simulation of a real-time data source, the data is sent to Fluentd **every 2 seconds**, according to the device's sampling frequency.
+4. **Data Enrichment:** Calculation of **derived parameters** (Pulse Pressure, BMI, MAP) with Apache Spark and risk classification using a **Random Forest** machine learning model trained on **[Human Vital Signs Dataset (Kaggle)](https://www.kaggle.com/datasets/nasirayub2/human-vital-sign-dataset)**.
 5. **Indexing and Visualization:** Data is indexed to enable **fast and efficient searching**, while a dashboard visualization displays the evolution of parameters over time, helping to identify **trends** and detect **anomalies**.
 
 ## Steps to Run the Project
