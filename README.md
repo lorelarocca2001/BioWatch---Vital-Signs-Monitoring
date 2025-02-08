@@ -3,6 +3,8 @@
 BioWatch is a system for monitoring patients' vital signs, designed to support healthcare personnel in managing patients remotely by collecting, processing, and displaying real-time vital data.
 
 ## Architettura del Sistema
+<img src="book/images/data pipeline.png" alt="Pipeline" width="300">
+
 L'architettura del sistema si basa su:
 - **Docker & Docker Compose** per la containerizzazione e gestione dei servizi.
 - **VitalDB Web API** per il recupero dei dati clinici.
