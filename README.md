@@ -69,7 +69,7 @@ docker compose up
 - **Color-coded gauges** for real-time risk assessment:
   
 
-<div style="display: flex; align-items: center; margin-left: 20px;">
+<div style="display: flex; align-items: center; margin-left: 100px;">
   <img src="book/images/gauge.JPG" alt="Gauge" width="300" style="margin-right: 10px;">
   <div style="flex: 1;">
     🟢 <strong>Green:</strong> Normal values. <br>
