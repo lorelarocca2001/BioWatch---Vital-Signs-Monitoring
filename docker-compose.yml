@@ -21,7 +21,7 @@ services:
       - PYTHON_APP=vitaldbscraper.py
       - PATIENT_ID=1
     volumes:
-      - ../../python/bin/:/usr/src/app/bin
+      - ./python/bin/:/usr/src/app/bin
     depends_on:
       - fluentd
 
@@ -34,7 +34,7 @@ services:
       - PYTHON_APP=vitaldbscraper.py
       - PATIENT_ID=4
     volumes:
-      - ../../python/bin/:/usr/src/app/bin
+      - ./python/bin/:/usr/src/app/bin
     depends_on:
       - fluentd
 
@@ -47,7 +47,7 @@ services:
       - PYTHON_APP=vitaldbscraper.py
       - PATIENT_ID=31
     volumes:
-      - ../../python/bin/:/usr/src/app/bin
+      - ./python/bin/:/usr/src/app/bin
     depends_on:
       - fluentd
 

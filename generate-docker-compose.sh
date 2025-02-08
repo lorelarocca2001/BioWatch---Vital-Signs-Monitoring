@@ -40,7 +40,7 @@ for i in $(seq 1 $NUM_PATIENTS); do
       - PYTHON_APP=vitaldbscraper.py
       - PATIENT_ID=${PATIENT_ID}
     volumes:
-      - ../../python/bin/:/usr/src/app/bin
+      - ./python/bin/:/usr/src/app/bin
     depends_on:
       - fluentd
 EOL
