@@ -68,18 +68,18 @@ docker compose up
   
 - **Color-coded gauges** for real-time risk assessment:
 
-<table>
+<table style="border: none; width: 100%;">
   <tr>
-    <td><img src="book/images/gauge.JPG" alt="Gauge" width="300"></td>
-    <td>
-      🟢 **Green:** Normal values. <br>
-      🟡 **Yellow:** Borderline values, attention required. <br>
-      🔴 **Red:** Critical values, potential emergency.
+    <td style="vertical-align: middle; padding-right: 10px;">
+      <img src="book/images/gauge.JPG" alt="Gauge" width="300">
+    </td>
+    <td style="vertical-align: middle;">
+      🟢 <strong>Green:</strong> Normal values. <br>
+      🟡 <strong>Yellow:</strong> Borderline values, attention required. <br>
+      🔴 <strong>Red:</strong> Critical values, potential emergency.
     </td>
   </tr>
 </table>
-
-
 
 ## Conclusion
 This system automates real-time risk assessment, overcoming fixed threshold limitations and enhancing medical decision support through **Machine Learning and Big Data Analytics**.
