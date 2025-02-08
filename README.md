@@ -6,12 +6,13 @@ BioWatch is a system for monitoring patients' vital signs, designed to support h
 <img src="book/images/data pipeline(2).png" alt="Pipeline" width="1500">
 The system architecture is based on:
 
-1. **Data Input - Vital DB**: External database providing patient vital parameters.
+1. **Data Source - Vital DB**: External database providing patient vital parameters.
 2. **Data Scraping - Vitaldbscraper** : For each patient, a dedicated Python module (e.g., vitaldbscraper_patient_1, vitaldbscraper_patient_2, etc.) extracts real-time data from the database.
-3. **Messaging - Apache Kafka** : Distributed messaging system for real-time data transmission, ensuring scalability and reliability.
-4. **Data Processing - Apache Spark** : Framework for distributed processing and real-time analysis of data transmitted from Kafka.
-5. **Storage and Search - Elasticsearch** : Processed data is indexed and stored for fast and efficient retrieval.
-6. **Visualization - Kibana** : Intuitive dashboards for real-time monitoring of vital parameters, based on data stored in Elasticsearch.
+3. **Data Ingestion - Fluentd** : A powerful open-source data collection tool that receives real-time data extracted from the Vital DB and transfers it to Apache Kafka
+4. **Data Streaming - Apache Kafka** : Distributed messaging system for real-time data transmission, ensuring scalability and reliability.
+5. **Data Processing - Apache Spark** : Framework for distributed processing and real-time analysis of data transmitted from Kafka.
+6. **Storage and Search - Elasticsearch** : Processed data is indexed and stored for fast and efficient retrieval.
+7. **Visualization - Kibana** : Intuitive dashboards for real-time monitoring of vital parameters, based on data stored in Elasticsearch.
 
 ## Workflow
 1. **Data Collection:** Retrieval of clinical and vital data via **VitalDB Web API** and **Solar 8000M**.
