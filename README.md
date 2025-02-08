@@ -1,5 +1,5 @@
 # BioWatch - Vital Signs Monitoring System
-## Descrizione del Progetto
+## Project description
 BioWatch is a system for monitoring patients' vital signs, designed to support healthcare personnel in managing patients remotely by collecting, processing, and displaying real-time vital data.
 
 ## Architettura del Sistema
