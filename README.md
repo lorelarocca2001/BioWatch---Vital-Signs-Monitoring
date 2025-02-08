@@ -2,17 +2,90 @@
 ## Project description
 BioWatch is a system for monitoring patients' vital signs, designed to support healthcare personnel in managing patients remotely by collecting, processing, and displaying real-time vital data.
 
-## Architettura del Sistema
+## System Architecture
 <img src="book/images/data pipeline.png" alt="Pipeline" width="1500">
+The system architecture is based on:
 
-L'architettura del sistema si basa su:
-- **Docker & Docker Compose** per la containerizzazione e gestione dei servizi.
-- **VitalDB Web API** per il recupero dei dati clinici.
-- **Solar 8000M** per l'acquisizione dei parametri vitali.
-- **Fluentd** per l'inoltro dei dati a **Kafka**.
-- **Apache Spark** per l'arricchimento e analisi dei dati.
-- **Machine Learning** per la classificazione del rischio del paziente.
-- **Elasticsearch** per l'indicizzazione e visualizzazione dei dati.
+1. **Data Input - Vital DB**  
+   - External database providing patient vital parameters.
+
+2. **Data Scraping - Vitaldbscraper**  
+   - For each patient, a dedicated Python module (e.g., vitaldbscraper_patient_1, vitaldbscraper_patient_2, etc.) extracts real-time data from the database.
+
+3. **Messaging - Apache Kafka**  
+   - Distributed messaging system for real-time data transmission, ensuring scalability and reliability.
+
+4. **Data Processing - Apache Spark**  
+   - Framework for distributed processing and real-time analysis of data transmitted from Kafka.
+
+5. **Storage and Search - Elasticsearch**  
+   - Processed data is indexed and stored for fast and efficient retrieval.
+
+6. **Visualization - Kibana**  
+   - Intuitive dashboards for real-time monitoring of vital parameters, based on data stored in Elasticsearch.
+
+## Workflow
+1. **Data Collection:** Retrieval of clinical and vital data via **VitalDB Web API** and **Solar 8000M**.
+2. **Preprocessing:** Sampling data every 2 seconds and removing the 50% least significant data (interquartile range).
+3. **Streaming:** Sending data to **Fluentd** via HTTP and forwarding it to **Kafka**.
+4. **Data Enrichment:** Calculation of derived parameters (Pulse Pressure, BMI, MAP) with **Apache Spark**.
+5. **AI Analysis:** Risk classification using a model trained on **Human Vital Signs Dataset (Kaggle)**.
+6. **Indexing and Visualization:** Elasticsearch for fast data retrieval and dashboard visualization.
+
+## Steps to Run the Project
+
+### Requirements
+- Install **Docker** and **Docker Compose**
+- Create an account on **Elastic Cloud**
+
+### Installation and Setup
+```sh
+# Clone the repository
+git clone url_github_progettotap
+cd progettotap
+
+# Configure the .env file
+nano .env
+# Set the following parameters:
+# NUM_PATIENTS, PATIENTS_IDS, ELASTIC_HOST, ELASTIC_USER, ELASTIC_PASSWORD
+
+# Assign permissions
+chmod -R 777 *
+
+# Build the Spark container
+docker build spark --tag tap:spark
+
+# Train the model
+docker run --hostname spark -p 4040:4040 -it --rm \
+  -v ./spark/code/:/opt/tap/ \
+  -v ./spark/dataset:/tmp/dataset tap:spark \
+  /opt/spark/bin/spark-submit /opt/tap/risk_prediction_model.py
+
+# Generate the docker-compose file
+bash generate-docker-compose.sh
+
+# Start the containers
+docker compose up
+```
+
+### Elastic Cloud Configuration
+1. Access **Elastic Cloud Personal Deployment**.
+2. Import the dashboard and index the data (index `vitalparameters`).
+
+## Data Visualization and Analysis
+- **Time-series charts** for each vital parameter.
+- **Color-coded gauges** for real-time risk assessment:
+  - 🟢 **Green:** Normal values.
+  - 🟡 **Yellow:** Borderline values, attention required.
+  - 🔴 **Red:** Critical values, potential emergency.
+
+## Conclusion
+This system automates real-time risk assessment, overcoming fixed threshold limitations and enhancing medical decision support through **Machine Learning and Big Data Analytics**.
+
+
+
+   
+   
 
 ## Flusso di Lavoro
 1. **Raccolta Dati:** Recupero dei dati clinici e vitali tramite **VitalDB Web API** e **Solar 8000M**.
