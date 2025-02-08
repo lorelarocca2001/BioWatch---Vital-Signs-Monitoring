@@ -67,6 +67,7 @@ docker compose up
   <img src="book/images/trend temporale.JPG" alt="Pipeline" width="1500">
   
 - **Color-coded gauges** for real-time risk assessment:
+  <img src="book/images/gauge.JPG" alt="Pipeline" width="1000">
   - 🟢 **Green:** Normal values.
   - 🟡 **Yellow:** Borderline values, attention required.
   - 🔴 **Red:** Critical values, potential emergency.
