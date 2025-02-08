@@ -63,7 +63,9 @@ docker compose up
 
 ## Data Visualization and Analysis
 - **Time-series charts** for each vital parameter.
+  
   <img src="book/images/trend temporale.JPG" alt="Pipeline" width="1500">
+  
 - **Color-coded gauges** for real-time risk assessment:
   - 🟢 **Green:** Normal values.
   - 🟡 **Yellow:** Borderline values, attention required.
