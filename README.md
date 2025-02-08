@@ -16,9 +16,9 @@ The system architecture is based on:
 
 ## Workflow
 1. **Data Collection:** Retrieving clinical data and vital parameters via **VitalDB Web API** and **VitalDB Python library**.
-2. **Preprocessing:** The data acquired from the **Solar8000M** device, which has a 2-second acquisition interval, is used. 50% of the least significant data is **removed** to account for the device's initial and final phases, during which the readings are either still stabilizing or experiencing decay, making them unreliable.
-3. **Streaming:** Sending data to Fluentd via **HTTP** and forwarding it to Kafka. To respect the device's sampling frequency and create a realistic simulation of a real-time data source, the data is sent to Fluentd **every 2 seconds**-
-4. **Data Enrichment:** Calculation of derived parameters (Pulse Pressure, BMI, MAP) with **Apache Spark** and risk classification using a Random Forest ML model trained on **Human Vital Signs Dataset (Kaggle)**.
+2. **Preprocessing:** Only data from the **Solar8000M** device, which captures the essential parameters for human life, is extracted. The parameters extracted are: Heart Rate, Respiratory Rate, Body Temperature, Oxygen Saturation, Systolic Blood Pressure and Diastolic Blood Pressure.  **50%** of the least significant data is removed to account for the device's initial and final phases, during which the readings are either still stabilizing or experiencing decay, making them unreliable.
+3. **Streaming:** Sending data to Fluentd via **HTTP** and forwarding it to Kafka. In order to create a realistic simulation of a real-time data source, the data is sent to Fluentd **every 2 seconds**, according to the device's sampling frequency.
+4. **Data Enrichment:** Calculation of derived parameters (Pulse Pressure, BMI, MAP) with **Apache Spark** and risk classification using a **Random Forest** machine learning model trained on **Human Vital Signs Dataset (Kaggle)**.
 6. **Indexing and Visualization:** Elasticsearch for fast data retrieval and dashboard visualization.
 
 ## Steps to Run the Project
