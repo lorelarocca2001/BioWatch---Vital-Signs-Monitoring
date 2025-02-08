@@ -1,6 +1,4 @@
 # BioWatch - Vital Signs Monitoring System
-# Data Pipeline Project
-
 ## Descrizione del Progetto
 Il progetto implementa una pipeline di acquisizione, elaborazione e analisi di dati clinici e biosensori intraoperatori. Utilizza tecnologie containerizzate per garantire scalabilità, portabilità e facilità di distribuzione.
 
