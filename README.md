@@ -68,8 +68,17 @@ docker compose up
   
 - **Color-coded gauges** for real-time risk assessment:
 
-| ![Gauge](book/images/gauge.JPG) | 🟢 **Green:** Normal values. <br> 🟡 **Yellow:** Borderline values, attention required. <br> 🔴 **Red:** Critical values, potential emergency. |
-|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+<table>
+  <tr>
+    <td><img src="book/images/gauge.JPG" alt="Gauge" width="300"></td>
+    <td>
+      🟢 **Green:** Normal values. <br>
+      🟡 **Yellow:** Borderline values, attention required. <br>
+      🔴 **Red:** Critical values, potential emergency.
+    </td>
+  </tr>
+</table>
+
 
 
 ## Conclusion
