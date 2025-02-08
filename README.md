@@ -3,7 +3,7 @@
 BioWatch is a system for monitoring patients' vital signs, designed to support healthcare personnel in managing patients remotely by collecting, processing, and displaying real-time vital data.
 
 ## System Architecture
-<img src="book/images/data pipeline.png" alt="Pipeline" width="1500" height="300">
+<img src="book/images/data pipeline.png" alt="Pipeline" width="1500" height="600">
 The system architecture is based on:
 
 1. **Data Input - Vital DB**: External database providing patient vital parameters.
