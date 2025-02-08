@@ -15,11 +15,10 @@ The system architecture is based on:
 7. **Kibana** : Intuitive dashboards for real-time monitoring of vital parameters, based on data stored in Elasticsearch.
 
 ## Workflow
-1. **Data Collection:** Retrieving vital parameters via **VitalDB Web API** and **VitalDB Python library**.
+1. **Data Collection:** Retrieving clinical data and vital parameters via **VitalDB Web API** and **VitalDB Python library**.
 2. **Preprocessing:** The data acquired from the **Solar8000M** device, which has a 2-second acquisition interval, is used. 50% of the least significant data is **removed** to account for the device's initial and final phases, during which the readings are either still stabilizing or experiencing decay, making them unreliable.
-3. **Streaming:** Sending data to **Fluentd** via HTTP and forwarding it to **Kafka**.
-4. **Data Enrichment:** Calculation of derived parameters (Pulse Pressure, BMI, MAP) with **Apache Spark**.
-5. **AI Analysis:** Risk classification using a model trained on **Human Vital Signs Dataset (Kaggle)**.
+3. **Streaming:** Sending data to Fluentd via **HTTP** and forwarding it to Kafka. To respect the device's sampling frequency and create a realistic simulation of a real-time data source, the data is sent to Fluentd **every 2 seconds**-
+4. **Data Enrichment:** Calculation of derived parameters (Pulse Pressure, BMI, MAP) with **Apache Spark** and risk classification using a Random Forest ML model trained on **Human Vital Signs Dataset (Kaggle)**.
 6. **Indexing and Visualization:** Elasticsearch for fast data retrieval and dashboard visualization.
 
 ## Steps to Run the Project
