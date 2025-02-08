@@ -59,7 +59,7 @@ docker compose up
 
 ### Elastic Cloud Configuration
 1. Access **Elastic Cloud Personal Deployment**.
-2. Import the dashboard and index the data (default index `vitalparameters`).
+2. Go to **Stack Management** -> **Kibana** -> **Saved Objects** -> **Import** and use the file `complete_dashboard.ndjson` in the `\kibana\dashboards` directory to import the visualizations and configurations.
 
 ## Data Visualization and Analysis
 - **Time-series charts** for each vital parameter.
