@@ -68,11 +68,9 @@ docker compose up
   
 - **Color-coded gauges** for real-time risk assessment:
 
-<div style="display: table; width: 100%;">
-  <div style="display: table-cell; vertical-align: middle; padding-right: 10px;">
-    <img src="book/images/gauge.JPG" alt="Gauge" width="300">
-  </div>
-  <div style="display: table-cell; vertical-align: middle;">
+<div style="display: flex; align-items: center;">
+  <img src="book/images/gauge.JPG" alt="Gauge" width="300" style="margin-right: 10px;">
+  <div style="flex: 1;">
     🟢 <strong>Green:</strong> Normal values. <br>
     🟡 <strong>Yellow:</strong> Borderline values, attention required. <br>
     🔴 <strong>Red:</strong> Critical values, potential emergency.
