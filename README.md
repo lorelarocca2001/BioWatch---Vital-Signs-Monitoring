@@ -68,7 +68,7 @@ docker compose up
   
 - **Color-coded gauges** for real-time risk assessment:
 
-<table style="border: none; width: auto; padding: 0; margin: 0; border-collapse: collapse;">
+<table style="border: none; width: 100%;">
   <tr>
     <td style="vertical-align: middle; padding-right: 10px;">
       <img src="book/images/gauge.JPG" alt="Gauge" width="300">
@@ -80,7 +80,6 @@ docker compose up
     </td>
   </tr>
 </table>
-
 
 ## Conclusion
 This system automates real-time risk assessment, overcoming fixed threshold limitations and enhancing medical decision support through **Machine Learning and Big Data Analytics**.
