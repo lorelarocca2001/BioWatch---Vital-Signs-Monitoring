@@ -67,10 +67,10 @@ docker compose up
   <img src="book/images/trend temporale.JPG" alt="Pipeline" width="1500">
   
 - **Color-coded gauges** for real-time risk assessment:
-  <img src="book/images/gauge.JPG" alt="Pipeline" width="300">
-  - 🟢 **Green:** Normal values.
-  - 🟡 **Yellow:** Borderline values, attention required.
-  - 🔴 **Red:** Critical values, potential emergency.
+
+| ![Gauge](book/images/gauge.JPG) | 🟢 **Green:** Normal values. <br> 🟡 **Yellow:** Borderline values, attention required. <br> 🔴 **Red:** Critical values, potential emergency. |
+|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+
 
 ## Conclusion
 This system automates real-time risk assessment, overcoming fixed threshold limitations and enhancing medical decision support through **Machine Learning and Big Data Analytics**.
