@@ -1,8 +1,6 @@
 # BioWatch - Vital Signs Monitoring System
 ## Descrizione del Progetto
-Il progetto implementa una pipeline di acquisizione, elaborazione e analisi di dati clinici e biosensori intraoperatori. Utilizza tecnologie containerizzate per garantire scalabilità, portabilità e facilità di distribuzione.
-
-Il dataset è composto da 6.388 pazienti, con dati raccolti a 500 Hz per i biosensori e a intervalli tra 1 e 7 secondi per le informazioni numeriche. Include oltre 60 parametri clinici relativi agli interventi chirurgici.
+BioWatch is a system for monitoring patients' vital signs, designed to support healthcare personnel in managing patients remotely by collecting, processing, and displaying real-time vital data.
 
 ## Architettura del Sistema
 L'architettura del sistema si basa su:
