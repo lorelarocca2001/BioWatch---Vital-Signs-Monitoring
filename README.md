@@ -6,17 +6,17 @@ BioWatch is a system for monitoring patients' vital signs, designed to support h
 <img src="book/images/data pipeline(2).png" alt="Pipeline" width="1500">
 The system architecture is based on:
 
-1. **VitalDB**: External database providing patient vital parameters.
+1. **VitalDB**: External database of 6,388 patients consisting of intraoperative biosignals and clinical information, which is used in the project to simulate a real-time data source.
 2. **VitalDBscraper** : For each patient, a dedicated Python module (e.g., vitaldbscraper_patient_1, vitaldbscraper_patient_2, etc.) extracts real patient data from the database.
-3. **Fluentd** : A powerful open-source data collection tool that receives patient data extracted from Vital DB and transfers it to Apache Kafka
+3. **Fluentd** : A powerful open-source data collection tool that receives patient data extracted from Vital DB and transfers it to Apache Kafka.
 4. **Apache Kafka** : Distributed messaging system for real-time data transmission, ensuring scalability and reliability.
 5. **Apache Spark** : Framework for distributed processing and real-time analysis of data transmitted from Kafka.
 6. **Elasticsearch** : Processed data is indexed and stored for fast and efficient retrieval.
 7. **Kibana** : Intuitive dashboards for real-time monitoring of vital parameters, based on data stored in Elasticsearch.
 
 ## Workflow
-1. **Data Collection:** Retrieval of clinical and vital data via **VitalDB Web API** and **Solar 8000M**.
-2. **Preprocessing:** Sampling data every 2 seconds and removing the 50% least significant data (interquartile range).
+1. **Data Collection:** Retrieving vital parameters via **VitalDB Web API** and **VitalDB Python library**.
+2. **Preprocessing:** The data acquired from the **Solar8000M** device, which has a 2-second acquisition interval, is used. 50% of the least significant data is **removed** to account for the device's initial and final phases, during which the readings are either still stabilizing or experiencing decay, making them unreliable.
 3. **Streaming:** Sending data to **Fluentd** via HTTP and forwarding it to **Kafka**.
 4. **Data Enrichment:** Calculation of derived parameters (Pulse Pressure, BMI, MAP) with **Apache Spark**.
 5. **AI Analysis:** Risk classification using a model trained on **Human Vital Signs Dataset (Kaggle)**.
