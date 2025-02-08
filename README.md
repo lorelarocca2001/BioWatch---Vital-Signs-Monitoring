@@ -67,8 +67,9 @@ docker compose up
   <img src="book/images/trend temporale.JPG" alt="Pipeline" width="1500">
   
 - **Color-coded gauges** for real-time risk assessment:
+  
 
-<div style="display: flex; align-items: center;">
+<div style="display: flex; align-items: center; margin-left: 20px;">
   <img src="book/images/gauge.JPG" alt="Gauge" width="300" style="margin-right: 10px;">
   <div style="flex: 1;">
     🟢 <strong>Green:</strong> Normal values. <br>
