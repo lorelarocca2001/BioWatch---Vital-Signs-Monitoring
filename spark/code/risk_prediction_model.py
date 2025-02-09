@@ -15,16 +15,20 @@ schema = tp.StructType([
     tp.StructField(name='Patient ID', dataType=tp.IntegerType(), nullable=True),
     tp.StructField(name='Heart Rate', dataType=tp.IntegerType(), nullable=True),
     tp.StructField(name='Respiratory Rate', dataType=tp.IntegerType(), nullable=True),
+    tp.StructField(name='Timestamp', dataType=tp.StringType(), nullable=True),
     tp.StructField(name='Body Temperature', dataType=tp.FloatType(), nullable=True),
     tp.StructField(name='Oxygen Saturation', dataType=tp.FloatType(), nullable=True),
     tp.StructField(name='Systolic Blood Pressure', dataType=tp.IntegerType(), nullable=True),
     tp.StructField(name='Diastolic Blood Pressure', dataType=tp.IntegerType(), nullable=True),
     tp.StructField(name='Age', dataType=tp.IntegerType(), nullable=True),
-    tp.StructField(name='Gender', dataType=tp.StringType(), nullable=True), 
+    tp.StructField(name='Gender', dataType=tp.StringType(), nullable=True), #variabile categorica
     tp.StructField(name='Weight', dataType=tp.FloatType(), nullable=True),
     tp.StructField(name='Height', dataType=tp.FloatType(), nullable=True),
+    tp.StructField(name='Derived_HRV', dataType=tp.FloatType(), nullable=True),
+    tp.StructField(name='Derived_Pulse_Pressure', dataType=tp.IntegerType(), nullable=True),
     tp.StructField(name='Derived_BMI', dataType=tp.FloatType(), nullable=True),
-    tp.StructField(name='Risk Category', dataType=tp.StringType(), nullable=True)
+    tp.StructField(name='Derived_MAP', dataType=tp.FloatType(), nullable=True),
+    tp.StructField(name='Risk Category', dataType=tp.StringType(), nullable=True) #variabile categorica
 ])
 
 # Read the dataset from CSV with defined schema
