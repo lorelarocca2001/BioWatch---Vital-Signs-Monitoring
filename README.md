@@ -71,7 +71,7 @@ docker compose up
 <table style="border: none; width: 100%;">
   <tr>
     <td style="vertical-align: middle;">
-      <img src="book/images/gauge.JPG" alt="Gauge" width="300">
+      <img src="book/images/gauge.JPG" alt="Gauge" width="300" style="margin-left: 50px;">
     </td>
     <td style="vertical-align: middle;">
       🟢 <strong>Green:</strong> Normal values. <br>
