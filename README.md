@@ -66,11 +66,11 @@ docker compose up
   
   <img src="book/images/trend temporale.JPG" alt="Pipeline" width="1500">
   
-- **Color-coded gauges** allow for a quick evaluation of the patient's overall health status
+- **Color-coded gauges** allow for a quick evaluation of the patient's overall health status.
   
-<table style="border: none; width: 100%; margin-left: 20px;">
+<table style="border: none; width: 100%;">
   <tr>
-    <td style="vertical-align: middle; padding-right: 100px;">
+    <td style="vertical-align: middle;">
       <img src="book/images/gauge.JPG" alt="Gauge" width="300">
     </td>
     <td style="vertical-align: middle;">
