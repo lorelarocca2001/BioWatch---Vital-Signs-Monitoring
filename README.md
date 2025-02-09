@@ -68,18 +68,15 @@ docker compose up
   
 - **Color-coded gauges** allow for a quick evaluation of the patient's overall health status
   
-<table style="border: none; width: 100%;">
-  <tr>
-    <td style="vertical-align: middle; padding-right: 10px;">
-      <img src="book/images/gauge.JPG" alt="Gauge" width="300">
-    </td>
-    <td style="vertical-align: middle;">
-      🟢 <strong>Green:</strong> Normal values. <br>
-      🟡 <strong>Yellow:</strong> Borderline values, attention required. <br>
-      🔴 <strong>Red:</strong> Critical values, potential emergency.
-    </td>
-  </tr>
-</table>
+<div style="display: flex; justify-content: space-between;">
+  <img src="book/images/gauge.JPG" alt="Gauge" width="300">
+  <div style="padding-left: 10px;">
+    🟢 <strong>Green:</strong> Normal values. <br>
+    🟡 <strong>Yellow:</strong> Borderline values, attention required. <br>
+    🔴 <strong>Red:</strong> Critical values, potential emergency.
+  </div>
+</div>
+
 
 - **Pie charts** provide an immediate statistical overview of the distribution of records classified as **High Risk** and **Low Risk** by the ML model. It allows us to quickly assess the patient's general health condition and its stability.
 
