@@ -5,7 +5,7 @@
 ## System Architecture
 <img src="book/images/data pipeline(2).png" alt="Pipeline" width="1500" height="400">
 
-The architecture is based on the following technologies, all executed within **Docker** containers:
+The architecture is made up by the following components:
 
 1. **VitalDB**: External database of 6,388 patients consisting of intraoperative biosignals and clinical information, which is used in the project to simulate a real-time data source.
 2. **VitalDBscraper** : For each patient, a dedicated Python module (e.g., vitaldbscraper_patient_1, vitaldbscraper_patient_2, etc.) extracts real patient data from the database.
