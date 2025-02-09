@@ -71,7 +71,7 @@ docker compose up
 <table style="border: none; width: 100%;">
   <tr>
     <td style="vertical-align: middle; padding-right: 10px;">
-      <img src="book/images/gauge.JPG" alt="Gauge" width="300">
+      <img src="book/images/gauge.JPG" alt="Gauge" width="200">
     </td>
     <td style="vertical-align: middle;">
       🟢 <strong>Green:</strong> Normal values. <br>
@@ -81,9 +81,14 @@ docker compose up
   </tr>
 </table>
 
-- A **Pie chart** provides an immediate statistical overview of the distribution of records classified as **High Risk** and **Low Risk** by the artificial intelligence model.
-  
-  <img src="book/images/ai_risk_classification.JPG" alt="Pipeline" width="300">
+- **Pie charts** provide an immediate statistical overview of the distribution of records classified as **High Risk** and **Low Risk** by the ML model. It allows us to quickly assess the patient's general health condition and its stability.
+
+<div style="display: flex; justify-content: space-between;">
+  <img src="book/images/pie-chart-red.JPG" alt="Pipeline" width="300">
+  <img src="book/images/pie-chart-blu.JPG" alt="Pipeline" width="300">
+  <img src="book/images/blue-red-pie-chart.JPG" alt="Pipeline" width="300">
+</div>
+
 
 
 
