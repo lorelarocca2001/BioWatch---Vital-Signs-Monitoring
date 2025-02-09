@@ -68,7 +68,7 @@ docker compose up
   
 - **Color-coded gauges** allow for a quick evaluation of the patient's overall health status
   
-<table style="border: none; width: 100%;">
+<table style="border: none; width: 100%; margin-left: 20px;">
   <tr>
     <td style="vertical-align: middle; padding-right: 10px;">
       <img src="book/images/gauge.JPG" alt="Gauge" width="300">
@@ -80,6 +80,7 @@ docker compose up
     </td>
   </tr>
 </table>
+
 
 - **Pie charts** provide an immediate statistical overview of the distribution of records classified as **High Risk** and **Low Risk** by the ML model. It allows us to quickly assess the patient's general health condition and its stability.
 
