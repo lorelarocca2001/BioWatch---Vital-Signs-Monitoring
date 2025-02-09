@@ -70,7 +70,7 @@ docker compose up
   
 <table style="border: none; width: 100%; margin-left: 20px;">
   <tr>
-    <td style="vertical-align: middle; padding-right: 10px;">
+    <td style="vertical-align: middle; padding-right: 100px;">
       <img src="book/images/gauge.JPG" alt="Gauge" width="300">
     </td>
     <td style="vertical-align: middle;">
