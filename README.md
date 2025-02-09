@@ -62,11 +62,11 @@ docker compose up
 2. Go to **Stack Management** -> **Kibana** -> **Saved Objects** -> **Import** and use the file `complete_dashboard.ndjson` in the `\kibana\dashboards` directory to import the visualizations and configurations.
 
 ## Data Visualization and Analysis
-- **Time-series charts** for each vital parameter.
+- **Time-series charts** help identify patterns, anomalies, or trends that may indicate a deterioration or improvement in the patient's condition.
   
   <img src="book/images/trend temporale.JPG" alt="Pipeline" width="1500">
   
-- **Color-coded gauges** for real-time risk assessment:
+- **Color-coded gauges** allow for a quick evaluation of the patient's overall health status
   
 
 <table style="border: none; width: 100%;">
