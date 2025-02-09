@@ -85,11 +85,9 @@ docker compose up
 
 <div style="display: flex; justify-content: space-between;">
   <img src="book/images/pie-chart-red.JPG" alt="Pipeline" width="300">
-  <img src="book/images/pie-chart-blu.JPG" alt="Pipeline" width="300">
+  <img src="book/images/pie-chart-blue.JPG" alt="Pipeline" width="300">
   <img src="book/images/blue-red-pie-chart.JPG" alt="Pipeline" width="300">
 </div>
-
-
 
 
 ## Conclusion
