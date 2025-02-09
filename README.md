@@ -84,9 +84,9 @@ docker compose up
 - **Pie charts** provide an immediate statistical overview of the distribution of records classified as **High Risk** and **Low Risk** by the ML model. It allows us to quickly assess the patient's general health condition and its stability.
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="book/images/pie-chart-red.JPG" alt="Pie" width="300">
-  <img src="book/images/pie-chart-blue.JPG" alt="Piee" width="320", height="265">
-  <img src="book/images/blue-red-pie-chart.JPG" alt="Pie" width="300">
+  <img src="book/images/pie-chart-high.JPG" alt="Pie" width="300">
+  <img src="book/images/pie-chart-low.JPG" alt="Piee" width="320", height="265">
+  <img src="book/images/double-pie-chart.JPG" alt="Pie" width="300">
 </div>
 
 
