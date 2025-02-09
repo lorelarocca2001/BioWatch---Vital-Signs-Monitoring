@@ -64,7 +64,7 @@ docker compose up
 ## Data Visualization and Analysis
 - **Time-series charts** help identify patterns, anomalies, or trends that may indicate a deterioration or improvement in the patient's condition.
   
-  <img src="book/images/trend temporale.JPG" alt="Pipeline" width="1650" height="300">
+  <img src="book/images/trend temporale.JPG" alt="Pipeline" width="1700" height="300">
   
 - **Color-coded gauges** allow for a quick evaluation of the patient's overall health status.
   
@@ -74,9 +74,9 @@ docker compose up
       <img src="book/images/gauge.JPG" alt="Gauge" width="300" style="margin-left: 50px;">
     </td>
     <td style="vertical-align: middle;">
-      🟢 <strong>Green:</strong> Normal values. <br>
-      🟡 <strong>Yellow:</strong> Borderline values, attention required. <br>
-      🔴 <strong>Red:</strong> Critical values, potential emergency.
+      🟢 <strong>Green:</strong> Low risk <br>
+      🟡 <strong>Yellow:</strong> Moderate risk, attention required. <br>
+      🔴 <strong>Red:</strong> High risk, potential emergency.
     </td>
   </tr>
 </table>
