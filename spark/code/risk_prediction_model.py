@@ -105,8 +105,4 @@ print("Done.")
 # Stop the Spark session to free resources
 spark.stop()
 
-
-
-
-
-
+print("ciao")
