@@ -83,7 +83,7 @@ docker compose up
 
 - A **Pie chart** provides an immediate statistical overview of the distribution of records classified as **High Risk** and **Low Risk** by the artificial intelligence model.
   
-  <img src="book/images/ai_risk_classification.JPG" alt="Pipeline" width="1500">
+  <img src="book/images/ai_risk_classification.JPG" alt="Pipeline" width="300">
 
 
 
