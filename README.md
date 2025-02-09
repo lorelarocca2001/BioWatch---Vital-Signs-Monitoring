@@ -57,7 +57,7 @@ bash generate-docker-compose.sh
 docker compose up
 ```
 
-### Elastic Cloud Configuration
+### Import the Kibana dashboard
 1. Access **Elastic Cloud Personal Deployment**.
 2. Go to **Stack Management** -> **Kibana** -> **Saved Objects** -> **Import** and use the file `complete_dashboard.ndjson` in the `\kibana\dashboards` directory to import the visualizations and configurations.
 
