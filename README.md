@@ -4,6 +4,7 @@
 
 ## System Architecture
 <img src="book/images/data pipeline(2).png" alt="Pipeline" width="1500" height="400">
+
 The system architecture is based on containerized technologies using **Docker**, ensuring easy deployment, scalability, and consistency across different environments. All components of the system are packaged as Docker containers, enabling seamless orchestration and integration. The architecture is built upon the following key technologies:
 
 1. **VitalDB**: External database of 6,388 patients consisting of intraoperative biosignals and clinical information, which is used in the project to simulate a real-time data source.
