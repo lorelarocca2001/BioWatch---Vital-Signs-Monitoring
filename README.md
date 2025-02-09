@@ -25,7 +25,7 @@ The system architecture is based on:
 
 ### Requirements
 - Install **Docker** and **Docker Compose**
-- Create an account on **Elastic Cloud**
+- Create an account on **Elastic Cloud** and set up a **New Deployment**
 
 ### Installation and Setup
 ```sh
