@@ -1,9 +1,8 @@
 from pyspark.sql import SparkSession
 from pyspark.conf import SparkConf
-from pyspark.sql.functions import from_json, col, round, when, to_timestamp
+from pyspark.sql.functions import from_json, col, round, when
 from pyspark.sql.types import StructType, StructField, StringType, FloatType
 from pyspark.ml.pipeline import PipelineModel
-from pyspark.sql.functions import date_format
 import os
 
 # Kafka and Elasticsearch configuration

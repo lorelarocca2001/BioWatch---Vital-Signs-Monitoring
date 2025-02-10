@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.ml import Pipeline
 from pyspark.ml.classification import RandomForestClassifier
-from pyspark.ml.feature import StringIndexer, VectorAssembler, StandardScaler
+from pyspark.ml.feature import StringIndexer, VectorAssembler
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 import pyspark.sql.types as tp
 
