@@ -31,7 +31,7 @@ if response.status_code == 200:
     # Read CSV using DictReader
     reader = csv.DictReader(csv_file)
     
-    # Filter rows where 'caseid' equals '4'
+    # Filter rows where 'caseid' equals 'patient_id'
     filtered_rows = [row for row in reader if int(row.get('caseid')) == patient_id]
     
     # Extract specific columns from filtered data
